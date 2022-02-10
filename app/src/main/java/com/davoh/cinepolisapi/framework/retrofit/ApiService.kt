@@ -1,7 +1,7 @@
 package com.davoh.cinepolisapi.framework.retrofit
 
-import com.davoh.cinepolisapi.framework.retrofit.requests.LoginRequest
 import com.davoh.cinepolisapi.framework.retrofit.responses.LoginResponse
+import com.davoh.cinepolisapi.framework.retrofit.responses.ProfileResponse
 import io.reactivex.rxjava3.core.Observable
 import retrofit2.http.*
 
@@ -17,5 +17,13 @@ interface ApiService {
               @Field("grant_type")  grantType :String,
               @Field("client_id")  clientId : String,
               @Field("client_secret")  clientSecret : String): Observable<LoginResponse>
+    
+    @GET("v1/members/profile")
+    @FormUrlEncoded
+    fun getProfile(
+        @Header("api_key") apiKey: String,
+        @Header("authorization") token:String,
+        @Query("country_code") countryCode: String
+    ) : Observable<ProfileResponse>
 
 }

@@ -1,7 +1,6 @@
 package com.davoh.cinepolisapi.repository
 
 import com.davoh.cinepolisapi.framework.retrofit.ApiService
-import com.davoh.cinepolisapi.framework.retrofit.requests.LoginRequest
 import com.davoh.cinepolisapi.framework.retrofit.responses.LoginResponse
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.core.Observable
