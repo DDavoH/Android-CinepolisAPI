@@ -6,6 +6,11 @@
     <string name="login">Iniciar sesión</string>
     <string name="email">Usuario</string>
     <string name="password">Contraseña</string>
+    
+    <!-- Home menu -->
+    <string name="perfil">Perfil</string>
+    <string name="cartelera">Cartelera</string>
+    <string name="complejo">Complejo</string>
 
 
 </resources>
