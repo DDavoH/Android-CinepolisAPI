@@ -29,7 +29,7 @@ class NetworkModule {
     
     @Provides
     fun provideUnsafeOkHttpClient(): OkHttpClient {
-        return provideUnsafeOkHttpClientTimeOut(25000L)
+        return provideUnsafeOkHttpClientTimeOut(550000L)
     }
     
     private fun provideUnsafeOkHttpClientTimeOut(milliseconds: Long?): OkHttpClient {

@@ -1,6 +1,8 @@
 package com.davoh.cinepolisapi.framework.retrofit
 
 import com.davoh.cinepolisapi.framework.retrofit.responses.LoginResponse
+import com.davoh.cinepolisapi.framework.retrofit.responses.MovieResponse
+import com.davoh.cinepolisapi.framework.retrofit.responses.MoviesResponse
 import com.davoh.cinepolisapi.framework.retrofit.responses.ProfileResponse
 import io.reactivex.rxjava3.core.Observable
 import retrofit2.http.*
@@ -24,5 +26,12 @@ interface ApiService {
         @Header("authorization") token:String,
         @Query("country_code") countryCode: String
     ) : Observable<ProfileResponse>
+    
+    @GET("v2/movies")
+    fun getMovies(
+        @Header("api_key") apiKey: String,
+        @Query("country_code") countryCode: String,
+        @Query("cinemas") cinemas:Int
+    ) : Observable<MoviesResponse>
 
 }
