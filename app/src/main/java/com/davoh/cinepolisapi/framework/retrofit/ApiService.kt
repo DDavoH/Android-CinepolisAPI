@@ -19,7 +19,6 @@ interface ApiService {
               @Field("client_secret")  clientSecret : String): Observable<LoginResponse>
     
     @GET("v1/members/profile")
-    @FormUrlEncoded
     fun getProfile(
         @Header("api_key") apiKey: String,
         @Header("authorization") token:String,

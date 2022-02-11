@@ -12,5 +12,11 @@
     <string name="cartelera">Cartelera</string>
     <string name="complejo">Complejo</string>
 
+    <!-- Profile -->
+    <string name="bienvenido">Bienvenido:</string>
+    <string name="username">Nombre de usuario:</string>
+    <string name="correo">Correo electronico:</string>
+    <string name="card">Tarjeta</string>
+
 
 </resources>

@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
 
     <item
         android:icon="@drawable/ic_profile"
-        android:id="@+id/menu_perfil"
+        android:id="@+id/profileFragment"
         android:title="@string/perfil" />
 
-    <item android:id="@+id/menu_cartelera"
+    <item android:id="@+id/moviesFragment"
         android:icon="@drawable/ic_movie"
         android:title="@string/cartelera"/>
 
-    <item android:id="@+id/menu_complejo"
+    <item android:id="@+id/complejosFragment"
         android:icon="@drawable/ic_complejo"
         android:title="@string/complejo"
         />
