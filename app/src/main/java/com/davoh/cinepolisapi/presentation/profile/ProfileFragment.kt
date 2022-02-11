@@ -42,6 +42,7 @@ class ProfileFragment : BaseFragment() {
             binding.tvCard.text = profileData.cardNumber
             
         })
+        viewModel.isLoading.observe(viewLifecycleOwner, this::showLoader)
     }
     
 }

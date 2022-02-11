@@ -19,10 +19,13 @@ class ProfileViewModel @Inject constructor(private val profileRepository: Profil
     val profileData = MutableLiveData<ProfileResponse>()
 
     fun getProfile() {
-        profileRepository.getProfile().subscribe({
+        profileRepository.getProfile()
+            .doOnSubscribe { isLoading.postValue(true) }
+            .subscribe({
             profileData.postValue(it)
+                isLoading.postValue(false)
         },{
-        
+                isLoading.postValue(false)
         })
     }
     
