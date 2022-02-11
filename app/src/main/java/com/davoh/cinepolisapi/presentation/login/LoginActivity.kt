@@ -7,10 +7,11 @@ import androidx.activity.viewModels
 import com.davoh.cinepolisapi.R
 import com.davoh.cinepolisapi.databinding.ActivityLoginBinding
 import com.davoh.cinepolisapi.presentation.home.HomeActivity
+import com.davoh.cinepolisapi.presentation.utils.BaseActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class LoginActivity : AppCompatActivity() {
+class LoginActivity : BaseActivity() {
     
     private lateinit var binding : ActivityLoginBinding
     private val viewModel : LoginViewModel by viewModels()
@@ -35,5 +36,6 @@ class LoginActivity : AppCompatActivity() {
             val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
         })
+        viewModel.isLoading.observe(this, this::showLoader)
     }
 }
